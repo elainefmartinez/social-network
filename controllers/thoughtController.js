@@ -4,7 +4,7 @@ module.exports = {
   // Get all thoughts
   async getThoughts(req, res) {
     try {
-      const courses = await Thought.find();
+      const thoughts = await Thought.find({});
       res.json(thoughts);
     } catch (err) {
       res.status(500).json(err);
@@ -13,11 +13,11 @@ module.exports = {
   // Get a single thought
   async getSingleThought(req, res) {
     try {
-      const thought = await Thought.findOne({ _id: req.params.thoughteId })
+      const thought = await Thought.findOne({ _id: req.params.thoughtId })
       
       if (!thought) {
         return res.status(404).json({ message: 'No thought with that ID' });
-      }
+      } 
       res.json(thought);
     } catch (err) {
       res.status(500).json(err);
@@ -36,7 +36,7 @@ module.exports = {
   // Delete a thought
   async deleteThought(req, res) {
     try {
-      const thought = await Thought.findOneAndDelete({ _id: req.params.courseId });
+      const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
 
       if (!thought) {
         res.status(404).json({ message: 'No thought with that ID' });
@@ -65,8 +65,12 @@ module.exports = {
       res.status(500).json(err);
     }
   },
-};
-//Need to add and delete reactions?
 
-module.exports = thoughtController;
+  
+
+
+
+
+};
+
 

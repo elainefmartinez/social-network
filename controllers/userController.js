@@ -41,6 +41,7 @@ module.exports = {
       const user = await User.findOneAndUpdate(
         {_id: req.params.userId},
         { $set: req.body},
+        {runValidators: true, new: true }
         //look up validator syntax
       );
       if (!user) {
@@ -74,7 +75,7 @@ module.exports = {
       const friend = await User.findOneAndUpdate(
         {_id: req.params.userId},
         {$addToSet: { friends: req.params.friendId}},
-        //validators
+        { runValidators: true, new: true }
       );
       if(!friend) {
         return res.status(404).json({ message: 'No user with that ID'});
@@ -90,10 +91,10 @@ module.exports = {
 /// Remove a friend 
   async removeFriend( req, res) {
     try{
-      const friend = await User.findOneAndDelete(
+      const friend = await User.findOneAndUpdate(
         {_id: req.params.userId},
         {$pull: {friends: req.params.friendId}},
-        //validators?
+        {new :true }
       );
       if (!friend) {
         return res.status(404).json({ message: 'No user found'});
@@ -105,4 +106,3 @@ module.exports = {
   },
 };
 
-  module.exports = userController;

@@ -2,7 +2,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Back end e-commerce site. Created using a working express.js API configured to use sequelize to interact with MySQL database. User can create, update and delete data in database. 
+API for social networking web application where users can share their thoughts, react to friends' thoughts, and create a friend list. Created using express.js and mongoose.
 
 ---
 ## Contents
@@ -16,12 +16,11 @@ Back end e-commerce site. Created using a working express.js API configured to u
 
 
 ## Installation:
-Node js, Inquirer, MySQL
+Express.js, MongoDB
 
 ---
 
 ## Usage:
-Source schema and seeds then run npm i then node server.js to start application
 
 ---
 
@@ -32,8 +31,9 @@ Source schema and seeds then run npm i then node server.js to start application
 
 
 ## Contributing:
-- Stack Overflow
+- MongoDB
 - TA assistance
+- Class mini project and preivious activities
 
 
 ---

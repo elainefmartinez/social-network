@@ -1,20 +1,19 @@
 const { Schema, model } = require('mongoose');
-// const assignmentSchema = require('./Reaction');
 
 // Schema to create User model
-const UserSchema = new Schema(
+const userSchema = new Schema(
   {
     username: {
       type: String,
       unique: true,
-      required: "Username required",
-      //trimmed?:,
+      required: true,
+      trim: true
     },
     email: {
       type: String,
-      required: "Username required",
+      required: true,
       unique: true,
-      validate: 'user',
+      // validate: 'user',
     },
     thoughts: [{
       type: Schema.Types.ObjectId,
@@ -38,12 +37,12 @@ const UserSchema = new Schema(
 );
 
 
-UserSchema
+userSchema
   .virtual('friendCount')
   .get(function () {
     return `${this.friends.length}`;
   });
 
-const User = model('User', UserSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
