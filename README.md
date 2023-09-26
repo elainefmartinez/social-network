@@ -21,18 +21,20 @@ Express.js, MongoDB
 ---
 
 ## Usage:
+User enters node server.js in command line to start server. User will open insomnia to view friends,users, reaction and thoughts routes folders. User can use user IDs to locate, delete, create or update information. 
 
 ---
 
 ## Screenshot:
 
 
-## Video Demo: 
+## Video Demo: https://drive.google.com/file/d/143nQcUQ0fmEqU4NWoxrUHsif1lVXUBZT/view
 
 
 ## Contributing:
 - MongoDB
 - TA assistance
+- Stackoverflow
 - Class mini project and preivious activities
 
 
