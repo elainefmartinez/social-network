@@ -26,6 +26,7 @@ User enters node server.js in command line to start server. User will open insom
 ---
 
 ## Screenshot:
+![socialnetwork](https://github.com/elainefmartinez/social-network/assets/85318206/24c712cb-3618-489a-bdce-7c04b54b91ce)
 
 
 ## Video Demo: https://drive.google.com/file/d/143nQcUQ0fmEqU4NWoxrUHsif1lVXUBZT/view
